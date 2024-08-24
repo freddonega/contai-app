@@ -1,19 +1,25 @@
-import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
-import { Stack } from 'expo-router';
-import * as SplashScreen from 'expo-splash-screen';
-import { useEffect } from 'react';
-import 'react-native-reanimated';
-
-import { useColorScheme } from '@/hooks/useColorScheme';
-
+import { useFonts } from "expo-font";
+import { Stack } from "expo-router";
+import * as SplashScreen from "expo-splash-screen";
+import { useEffect } from "react";
+import "react-native-reanimated";
+import { View, StyleSheet } from "react-native";
+import "../global.css";
+import colors from "@/colors";
+import { StatusBar } from "expo-status-bar";
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
-  const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    InterThin: require("../assets/fonts/Inter-Thin.ttf"),
+    InterRegular: require("../assets/fonts/Inter-Regular.ttf"),
+    InterBold: require("../assets/fonts/Inter-Bold.ttf"),
+    InterBlack: require("../assets/fonts/Inter-Black.ttf"),
+    InterSemiBold: require("../assets/fonts/Inter-SemiBold.ttf"),
+    InterExtraBold: require("../assets/fonts/Inter-ExtraBold.ttf"),
+    InterExtraLight: require("../assets/fonts/Inter-ExtraLight.ttf"),
+    InterMedium: require("../assets/fonts/Inter-Medium.ttf"),
   });
 
   useEffect(() => {
@@ -27,11 +33,17 @@ export default function RootLayout() {
   }
 
   return (
-    <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+    <View className="flex-1">
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: colors.contai.navy },
+        }}
+      >
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(app)" />
       </Stack>
-    </ThemeProvider>
+      <StatusBar style="auto" />
+    </View>
   );
 }

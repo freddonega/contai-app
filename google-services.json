@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "926915256172",
+    "project_id": "contai-55247",
+    "storage_bucket": "contai-55247.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:926915256172:android:366bc05eb3995faef8dd49",
+        "android_client_info": {
+          "package_name": "com.contai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "926915256172-i4kkmn55u6pd41836ta56drhncvrs6vi.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.contai",
+            "certificate_hash": "07d783ac264f4ada932a5a31498780e4ce0fb8c2"
+          }
+        },
+        {
+          "client_id": "926915256172-q6tobpemvhl3bdgpfgf4sjl7fpfkulsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDivIn0smUbfQRmZN-w22TpQiht_NkkoCE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "926915256172-0do93jejrn02980nsb4b4u9al3nd4kma.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
